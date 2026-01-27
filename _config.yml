@@ -1,3 +1,8 @@
 theme: jekyll-theme-minimal
 title: Alejandro Ramos | Technical Ops
 description: Apuntes de campo sobre SysAdmin, Redes y Securización.
+# Configuración de Paginación
+paginate: 5
+paginate_path: "/page:num/"
+plugins:
+  - jekyll-paginate
