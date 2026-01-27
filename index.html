@@ -1,0 +1,49 @@
+---
+layout: default
+title: Home
+---
+
+<div class="home">
+  <h1>⚡ Technical Ops: SysAdmin & Security</h1>
+  <p>Bienvenido a mi bitácora personal. Aquí documento soluciones prácticas sobre <strong>Administración de Sistemas</strong>, <strong>Arquitectura de Red</strong> y <strong>Hacking Ético</strong>.</p>
+
+  <hr>
+
+  <h2>📝 Artículos Recientes</h2>
+
+  <ul class="post-list">
+    {% for post in paginator.posts %}
+      <li>
+        <h3>
+          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h3>
+        <span style="color: gray; font-size: 0.9em;">{{ post.date | date: "%d/%m/%Y" }}</span>
+        <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+
+  {% if paginator.total_pages > 1 %}
+  <div class="pagination" style="text-align: center; margin-top: 20px;">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path | relative_url }}">« Anterior</a>
+    {% endif %}
+
+    <span style="margin: 0 10px;">Página {{ paginator.page }} de {{ paginator.total_pages }}</span>
+
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path | relative_url }}">Siguiente »</a>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  <hr>
+
+  <h3>🚧 Próximamente...</h3>
+  <ul>
+    <li>Análisis de tráfico con Wireshark.</li>
+    <li>Hardening de servidores Linux.</li>
+  </ul>
+  
+  <p><em>Alejandro Ramos Naveros | <a href="[https://www.linkedin.com/in/alex-arn/](https://www.linkedin.com/in/alex-arn/)">LinkedIn</a></em></p>
+</div>
