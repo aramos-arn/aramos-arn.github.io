@@ -27,7 +27,9 @@ maxretry = 3         # Número máximo de intentos antes de ser baneado
 findtime = 600       # Tiempo en el que permiten los fallos indicados en maxretry (segundos)
 bantime  = 86400     # Tiempo de baneo (segundos)
 ```
-
+Otros parámetros que podemos configurar son:
+* `ignoreip`: Con este podemos ignorar alguna IP, útil para poner alguna IP confiable, ¡pero con mucho cuidado!
+* `action`: Aquí podemos llamar a acciones externas que también podremos crear.
 ## 🔍 2. Creación del Filtro
 
 Ahora necesitamos indicar a Fail2ban como saber que es un intento fallido.
