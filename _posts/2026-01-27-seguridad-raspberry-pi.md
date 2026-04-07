@@ -3,7 +3,7 @@ layout: default
 title: "Bastionado de Red Doméstica con Raspberry Pi"
 date: 2026-01-27
 categories: [Seguridad, SysAdmin, Linux]
-excerpt: "Guía para la puesta en marcha de Pi-hole."
+excerpt: "Guía para la puesta en marcha de Pi-hole con Raspberry Pi"
 ---
 # Bastionado de Red Doméstica con Raspberry Pi
 
