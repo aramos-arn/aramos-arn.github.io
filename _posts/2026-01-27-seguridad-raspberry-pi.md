@@ -1,3 +1,10 @@
+---
+layout: default
+title: "Bastionado de Red Doméstica con Raspberry Pi"
+date: 2026-01-27
+categories: [Seguridad, SysAdmin, Linux]
+excerpt: "Guía para la puesta en marcha de Pi-hole."
+---
 # Bastionado de Red Doméstica con Raspberry Pi
 
 En este proyecto documento cómo he configurado una defensa perimetral para mi red doméstica utilizando hardware de bajo coste. El objetivo es bloquear telemetría y dominios maliciosos a nivel de DNS.
@@ -16,3 +23,4 @@ sudo apt update && sudo apt upgrade -y
 # Configuración de firewall UFW
 sudo ufw allow 51820/udp  # Puerto WireGuard
 sudo ufw enable
+```
