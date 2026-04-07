@@ -8,6 +8,8 @@ excerpt: "Guía práctica para securizar un servicio TightVNC expuesto a interne
 
 # Bastionado de servicio VNC ante intentos de acceso y fuerza bruta
 
+> *Hace unos días, intentando hacer una conexión a mi servicio VNC desde internet, este no me lo permitía y me devolvía un mensaje de 'demasiados intentos fallidos'. Como estaba seguro de que no había sido yo, me puse a revisar el log del servicio y vi que estaba recibiendo un intento de acceso por fuerza bruta desde múltiples IPs. Por suerte, VNC incorpora un bloqueo por defecto ante este tipo de ataques, pero afecta a todas las conexiones entrantes, es decir, no verifica las IPs y, una vez se ha cumplido el número de intentos, bloquea todas las peticiones durante un tiempo determinado. Además, TightVNC no permite ajustar estos parámetros.*
+
 En este post documentamos cómo configurar fail2ban para proteger un servicio VNC expuesto a internet.
 El objetivo es monitorizar los logs del servicio y bloquear dinámicamente a nivel de firewall (iptables) las direcciones IP que superen un umbral de intentos fallidos.
 
